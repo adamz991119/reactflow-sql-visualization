@@ -1,17 +1,17 @@
-![SQL Schema Visualizer snapshot](https://raw.githubusercontent.com/sqlhabit/sql_schema_visualizer/main/docs/snapshot.png)
+![SQL Schema Visualizer snapshot](https://raw.githubusercontent.com/adamz991119/reactflow-sql-visualization/main/docs/snapshot.png)
 
 <div align="center">
 
 # SQL Schema Visualizer
 
-![GitHub License MIT](https://img.shields.io/github/license/sqlhabit/sql_schema_visualizer?color=%2347A3F3)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/sqlhabit/sql_schema_visualizer?color=%2347A3F3)
+![GitHub License MIT](https://img.shields.io/github/license/adamz991119/reactflow-sql-visualization?color=%2347A3F3)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/adamz991119/reactflow-sql-visualization?color=%2347A3F3)
 
 A relational database schema visualizer built with React and [ReactFlow](https://github.com/wbkd/react-flow).
 
 Originally built for [the SQL Habit course](https://www.sqlhabit.com/), it's available for everyone. Enjoy :heart:
 
-[:mag: How to visualize your schema](https://github.com/sqlhabit/sql_schema_visualizer#how-to-visualize-your-schema) | [:microscope: How it works](https://github.com/sqlhabit/sql_schema_visualizer#under-the-hood) | [:handshake: Contributing](https://github.com/sqlhabit/sql_schema_visualizer#contributing)
+[:mag: How to visualize your schema](https://github.com/adamz991119/reactflow-sql-visualization#how-to-visualize-your-schema) | [:microscope: How it works](https://github.com/adamz991119/reactflow-sql-visualization#under-the-hood) | [:handshake: Contributing](https://github.com/adamz991119/reactflow-sql-visualization#contributing)
 
 </div>
 
@@ -29,7 +29,7 @@ Originally built for [the SQL Habit course](https://www.sqlhabit.com/), it's ava
 
 Schema Visualizer can visualize multiple schemas – each schema will have its own URL.
 
-A schema configuration lives in [its own folder](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config/databases) and contains a bunch of [simple JSON files](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config/databases/bindle).
+A schema configuration lives in [its own folder](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config/databases) and contains a bunch of [simple JSON files](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config/databases/bindle).
 
 Here's how you can import your schema:
 
@@ -38,7 +38,7 @@ Here's how you can import your schema:
 Clone the repo:
 
 ```bash
-git clone https://github.com/sqlhabit/sql_schema_visualizer.git
+git clone https://github.com/adamz991119/reactflow-sql-visualization.git
 
 cd sql_schema_visualizer
 ```
@@ -61,11 +61,11 @@ npm run reset
 
 ### Step 3. Export your schema into a CSV file
 
-A schema config consists of [tables](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config/databases/bindle/tables), [edges](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/edges.json), [table positions](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tablePositions.json) and [schema colors](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/schemaColors.json).
+A schema config consists of [tables](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config/databases/bindle/tables), [edges](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/edges.json), [table positions](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tablePositions.json) and [schema colors](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/schemaColors.json).
 
 Good news is that we can import tables using an SQL query. :rocket:
 
-Pick a query for your database type and save the output to a CSV file like `my_schema.csv`. Put it to the root folder (next to [the `schema.csv.template` file](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/schema.csv.template)).
+Pick a query for your database type and save the output to a CSV file like `my_schema.csv`. Put it to the root folder (next to [the `schema.csv.template` file](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/schema.csv.template)).
 
 #### Postgres / Redshift
 
@@ -125,7 +125,7 @@ npm run start
 
 #### A. Set primary keys
 
-To show a :key: icon next to the column name, add the `key` param to a column definition. Here's an example from [the `users` table](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tables/users.json):
+To show a :key: icon next to the column name, add the `key` param to a column definition. Here's an example from [the `users` table](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tables/users.json):
 
 ```json
 {
@@ -138,7 +138,7 @@ To show a :key: icon next to the column name, add the `key` param to a column de
 
 #### B. Add edges
 
-Define edges in [the `src/config/edges.json` file](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/edges.json):
+Define edges in [the `src/config/edges.json` file](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/edges.json):
 
 Here's an example for **has one** relation:
 
@@ -166,7 +166,7 @@ and **has many** relation:
 
 #### C. Add schema colors
 
-You can set custom header colors for tables that belongs to the same schema in [the `schemaColors.json` file](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/schemaColors.json). Here's an example:
+You can set custom header colors for tables that belongs to the same schema in [the `schemaColors.json` file](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/schemaColors.json). Here's an example:
 
 ```json
 {
@@ -181,7 +181,7 @@ You can set custom header colors for tables that belongs to the same schema in [
 
 #### D. Add table positions
 
-Table positions are defined in the [`tablePositions.json` file](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tablePositions.json):
+Table positions are defined in the [`tablePositions.json` file](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tablePositions.json):
 
 ```json
 {
@@ -199,21 +199,21 @@ Table positions are defined in the [`tablePositions.json` file](https://github.c
 }
 ```
 
-After you import a schema, every table will have a default position set in the [`tablePositions.json`](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tablePositions.json) file.
+After you import a schema, every table will have a default position set in the [`tablePositions.json`](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tablePositions.json) file.
 
 There's no need to update them manually. Instead:
 
 1. Open Schema Visualizer [http://localhost:3000](http://localhost:3000).
 2. Drag table nodes around to find a perfect arrangement.
 3. **CTRL** + **P**. It copies node positions JSON to your clipboard.
-4. Paste (**CMD** + **V**) JSON with positions to the [`tablePositions.json`](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tablePositions.json) file of your schema.
+4. Paste (**CMD** + **V**) JSON with positions to the [`tablePositions.json`](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tablePositions.json) file of your schema.
 5. PROFIT :beers:
 
 #### E. Add table and column descriptions
 
 Table and column descriptions are visible if you press `CMD` key and hover over a table or column name.
 
-Add custom copy to the `"description"` keys [in table config files](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config/databases/bindle/tables/users.json). Here's an example:
+Add custom copy to the `"description"` keys [in table config files](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config/databases/bindle/tables/users.json). Here's an example:
 
 ```json
 {
@@ -234,7 +234,7 @@ Add custom copy to the `"description"` keys [in table config files](https://gith
 
 #### Building your Schema Visualizer
 
-Once you're finished with config file, build the project and upload the files from the [`/build`](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/build) folder to your hosting of choice:
+Once you're finished with config file, build the project and upload the files from the [`/build`](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/build) folder to your hosting of choice:
 
 
 ```sh
@@ -252,7 +252,7 @@ I highly recommend https://surge.sh/. It'll take you ~2 minutes to deploy your s
 
 You're more than welcome to contribute. In fact, I'm really looking forward to it! :rocket:
 
-Just make sure to check out the [contribution guidelines](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/CONTRIBUTING.md). :pray:
+Just make sure to check out the [contribution guidelines](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/CONTRIBUTING.md). :pray:
 
 ## Under the hood
 
@@ -264,30 +264,30 @@ Here's [a ReactFlow sandbox example](https://github.com/wbkd/react-flow-example-
 
 ### Config files
 
-It all starts with plain [JSON config files](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config). There're 4 of them:
+It all starts with plain [JSON config files](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config). There're 4 of them:
 
-* [tables](https://github.com/sqlhabit/sql_schema_visualizer/tree/main/src/config/databases/bindle/tables)
-* [edges](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/edges.json)
-* [tablePositions](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/tablePositions.json)
-* [schemaColors](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/config/databases/bindle/schemaColors.json)
+* [tables](https://github.com/adamz991119/reactflow-sql-visualization/tree/main/src/config/databases/bindle/tables)
+* [edges](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/edges.json)
+* [tablePositions](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/tablePositions.json)
+* [schemaColors](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/config/databases/bindle/schemaColors.json)
 
 Later they're translated into Nodes and Edges digestible by ReactFlow.
 
 ### Nodes and Handles
 
-ReactFlow draws SVG edges between custom [Table Nodes](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/Visualizer/components/TableNode.tsx#L64).
+ReactFlow draws SVG edges between custom [Table Nodes](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/Visualizer/components/TableNode.tsx#L64).
 
-Those edges start and end in ReactFlow Handle's. Every table column row has 2 handles – left and right. :bulb: A handle could be either **source** (for an outgoing edge) or a **target** (for an incoming edge). Handles are configured [based on the edges config](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/Visualizer/helpers/initializeNodes.ts#L4).
+Those edges start and end in ReactFlow Handle's. Every table column row has 2 handles – left and right. :bulb: A handle could be either **source** (for an outgoing edge) or a **target** (for an incoming edge). Handles are configured [based on the edges config](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/Visualizer/helpers/initializeNodes.ts#L4).
 
 ### Edges
 
-As you can see, edges are dynamically change handles and orientation depending on relative node positions. That way it's less config to maintain, here're [helper](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/Visualizer/helpers/calculateTargetPosition.ts) [functions](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/Visualizer/helpers/calculateSourcePosition.ts) that take care of that.
+As you can see, edges are dynamically change handles and orientation depending on relative node positions. That way it's less config to maintain, here're [helper](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/Visualizer/helpers/calculateTargetPosition.ts) [functions](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/Visualizer/helpers/calculateSourcePosition.ts) that take care of that.
 
 ### More details
 
-[Here's the entry file](https://github.com/sqlhabit/sql_schema_visualizer/blob/main/src/Visualizer/index.tsx) to the ReactFlow app.
+[Here's the entry file](https://github.com/adamz991119/reactflow-sql-visualization/blob/main/src/Visualizer/index.tsx) to the ReactFlow app.
 
-Have fun exploring the app, it was a pleasure to build! If you have a question – open a [new issue](https://github.com/sqlhabit/sql_schema_visualizer/issues/new/choose). :beers:
+Have fun exploring the app, it was a pleasure to build! If you have a question – open a [new issue](https://github.com/adamz991119/reactflow-sql-visualization/issues/new/choose). :beers:
 
 ## Development
 
